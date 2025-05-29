@@ -1,12 +1,13 @@
-/* AdminLogin.css */
 .admin-portal-container {
   max-width: 450px;
   margin: 2rem auto;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  font-family: "Segoe UI", system-ui, sans-serif;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .admin-header {
@@ -15,18 +16,23 @@
 }
 
 .admin-header h1 {
-  color: #2c3e50;
+  color: var(--primary);
   margin-bottom: 0.5rem;
   font-size: 1.8rem;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .secure-login-badge {
-  color: #3498db;
+  color: var(--secondary);
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .lock-icon {
@@ -47,22 +53,23 @@
 
 .input-field label {
   font-weight: 500;
-  color: #34495e;
-  font-size: 0.9rem;
+  color: var(--primary);
+  font-size: 0.95rem;
 }
 
 .form-input {
   padding: 0.8rem 1rem;
-  border: 1px solid #dfe6e9;
-  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
   font-size: 1rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .form-input:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
 }
 
 .email-input {
@@ -75,62 +82,97 @@
 
 .divider {
   height: 1px;
-  background: #ecf0f1;
+  background: rgba(0, 0, 0, 0.05);
   margin: 1rem 0;
 }
 
 .login-button {
-  background: #3498db;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: white;
   border: none;
   padding: 0.8rem;
-  border-radius: 6px;
+  border-radius: 0.75rem;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
 }
 
 .login-button:hover {
-  background: #2980b9;
-  transform: translateY(-1px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
 }
 
 .login-button:disabled {
-  background: #bdc3c7;
+  background: var(--light-text);
   cursor: not-allowed;
   transform: none;
+  box-shadow: none;
 }
 
 .error-message {
-  color: #e74c3c;
+  color: var(--danger);
   background: rgba(231, 76, 60, 0.1);
   padding: 0.8rem;
-  border-radius: 6px;
+  border-radius: 0.5rem;
   margin: 1rem 0;
   text-align: center;
   font-size: 0.9rem;
+  animation: shake 0.5s;
 }
 
 .admin-footer {
   margin-top: 2rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #7f8c8d;
+  color: var(--light-text);
 }
 
 .forgot-password {
-  color: #3498db;
+  color: var(--secondary);
   text-decoration: none;
   display: block;
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--primary);
 }
 
 .security-note {
   font-size: 0.8rem;
-  color: #95a5a6;
+  color: var(--light-text);
 }
+
 .form-input::placeholder {
-  color: rgb(100, 100, 100);
-  font-family: Courier, monospace;
+  color: var(--light-text);
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
 }

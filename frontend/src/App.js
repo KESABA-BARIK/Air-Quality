@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, Navigate, NavLink } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Navigate,
+  NavLink,
+} from "react-router-dom";
 import Home from "./components/Home";
 import FactoryAnalysisForm from "./components/FactoryAnalysisForm";
 import TrafficAnalysisForm from "./components/TrafficAnalysisForm";
@@ -32,19 +39,44 @@ const App = () => {
           </Link>
 
           <div className="navbar-links">
-            <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
               Home
             </NavLink>
-            <NavLink to="/factory-analysis" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <NavLink
+              to="/factory-analysis"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
               Factory Analysis
             </NavLink>
-            <NavLink to="/traffic-analysis" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <NavLink
+              to="/traffic-analysis"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
               Traffic Analysis
             </NavLink>
-            <NavLink to="/report" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <NavLink
+              to="/report"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
               Report
             </NavLink>
-            <NavLink to="/admin/login" className={({ isActive }) => isActive ? "nav-link admin-link" : "nav-link admin-link"}>
+            <NavLink
+              to="/admin/login"
+              className={({ isActive }) =>
+                isActive ? "nav-link admin-link" : "nav-link admin-link"
+              }
+            >
               Admin
             </NavLink>
           </div>
@@ -58,7 +90,9 @@ const App = () => {
           <Route path="/report" element={<UserReportForm />} />
           <Route
             path="/admin/login"
-            element={<AdminLogin setIsAdminAuthenticated={setIsAdminAuthenticated} />}
+            element={
+              <AdminLogin setIsAdminAuthenticated={setIsAdminAuthenticated} />
+            }
           />
           <Route
             path="/admin/dashboard"
@@ -90,8 +124,10 @@ const App = () => {
               zIndex: 1000,
               transition: "transform 0.3s ease",
             }}
-            onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.1)"}
-            onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "scale(1.1)")
+            }
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             title="Open ChatBot"
           >
             💬
@@ -100,20 +136,23 @@ const App = () => {
 
         {/* Fullscreen Chatbot */}
         {showChatbot && (
-          <div className="chatbot-window" style={{
-            position: "fixed",
-            bottom: "90px",
-            right: "20px",
-            width: "350px",
-            height: "750px",
-            backgroundColor: "#ffffff",
-            borderRadius: "12px",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
-            zIndex: 1000,
-            display: "flex",
-            flexDirection: "column",
-            overflow: "hidden"
-          }}>
+          <div
+            className="chatbot-window"
+            style={{
+              position: "fixed",
+              bottom: "90px",
+              right: "20px",
+              width: "350px",
+              height: "750px",
+              backgroundColor: "#ffffff",
+              borderRadius: "12px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+              zIndex: 1000,
+              display: "flex",
+              flexDirection: "column",
+              overflow: "hidden",
+            }}
+          >
             <button
               onClick={toggleChatbot}
               style={{
@@ -124,7 +163,7 @@ const App = () => {
                 fontWeight: "bold",
                 color: "#555",
                 padding: "8px",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
               title="Close"
             >
