@@ -25,9 +25,11 @@ const Home = () => {
                 return res.json();
             })
             .then((result) => {
-                if (result.status === 'success' && Array.isArray(result.data)) {
-                    setData(result.data);
-                } else {
+                if (Array.isArray(result)) {
+        setData(result);
+    } else if (result.status === 'success' && Array.isArray(result.data)) {
+        setData(result.data);
+    }else {
                     setError('Invalid data structure received from the server');
                 }
                 setLoading(false);

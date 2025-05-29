@@ -187,7 +187,7 @@ const FactoryAnalysisForm = () => {
                                     </span>
                                 </div>
                                 <div className="card-details">
-                                    <span>AQI: {analysis.aqi}</span>
+                                    <span>AQI: {analysis.aqi}</span><br></br>
                                     <span>{new Date(analysis.timestamp).toLocaleString()}</span>
                                 </div>
                             </div>
