@@ -158,12 +158,14 @@ const App = () => {
               style={{
                 alignSelf: "flex-end",
                 background: "transparent",
+                position: "absolute",
                 border: "none",
                 fontSize: "20px",
                 fontWeight: "bold",
                 color: "#555",
-                padding: "8px",
+                padding: "20px",
                 cursor: "pointer",
+                zIndex: "10",
               }}
               title="Close"
             >

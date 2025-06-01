@@ -1,7 +1,7 @@
 .chatbot {
   max-width: 400px;
   margin: 0 auto;
-  border-radius: 1.5rem;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   font-family: "Poppins", sans-serif;
