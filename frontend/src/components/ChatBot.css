@@ -4,7 +4,7 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  font-family: "Poppins", sans-serif;
+  font-family: PlaypenSansThai;
   background: white;
   display: flex;
   flex-direction: column;
@@ -96,7 +96,7 @@
   color: var(--primary);
   cursor: pointer;
   transition: all 0.2s;
-  font-family: "Poppins", sans-serif;
+  font-family: PlaypenSansThai;
 }
 
 .suggestions button:hover {
@@ -172,7 +172,7 @@
   font-size: 1rem;
   outline: none;
   transition: all 0.3s;
-  font-family: "Poppins", sans-serif;
+  font-family: PlaypenSansThai;
 }
 
 .chatbot-input input:focus {
